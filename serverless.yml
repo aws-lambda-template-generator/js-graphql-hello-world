@@ -11,6 +11,8 @@ custom:
   env: ${opt:env, self:custom.stage}
   account: ${opt:account, self:provider.account}
   functionName: ${self:custom.env}-js-graphql-hello-world # This is the function name appears in the AWS lambda console.
+  # serverless-offline:
+  #   noPrependStageInUrl: true
 
 provider:
   name: aws
@@ -33,7 +35,7 @@ functions:
     events:
       - http:
           path: graphql/profile
-          method: post
+          method: any
           cors:
             origin: '*'
       - http:

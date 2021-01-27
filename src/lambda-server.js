@@ -1,4 +1,5 @@
-const { ApolloServer } =  require('apollo-server-lambda');
+import { ApolloServer } from 'apollo-server-lambda';
+
 const { typeDefs } = require('./schema');
 const { resolvers } = require('./resolvers');
 
@@ -10,10 +11,7 @@ const lambdaServer = new ApolloServer({
     functionName: context.functionName,
     event,
     context,
-    playground: true,
-  introspection: true,
   }),
 });
 
-exports.graphqlHandler = lambdaServer.createHandler();
-
+module.exports = { lambdaServer };
