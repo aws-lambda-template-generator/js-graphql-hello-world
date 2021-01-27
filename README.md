@@ -10,7 +10,6 @@ yarn add apollo-server-lambda
 yarn add bufferutil utf-8-validate
 ```
 
-
 ## Testing lambda locally
 
 Use Serverless Offline.
@@ -28,7 +27,13 @@ curl -X POST http://localhost:3000/test/graphql/profile --data '{"query": "{hell
 
 Playground is available.
 
-Go to `http://localhost:3000/test/graphql`. You may need to change the actual query url within the query tabto `http://localhost:3000/test/graphql/profile`
+Go to `http://localhost:3000/test/graphql`. You may need to change the actual query url within the query tab to `http://localhost:3000/test/graphql/profile`
+
+Using local.js file can give you a quick test although serverless offline is probably good enough and it is not really necessary.
+
+```bash
+yarn dev
+```
 
 # Deploy
 
