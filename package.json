@@ -1,0 +1,52 @@
+{
+  "name": "ts-graphql-hello-world",
+  "version": "1.0.0",
+  "description": "TypeScript Lambda function with GraphQL Hello World Example",
+  "scripts": {
+    "build": "tsc",
+    "watch:build": "tsc --watch",
+    "test": "nyc --reporter=html --reporter=text mocha --require source-map-support/register -r ts-node/register src/**/*.spec.ts",
+    "test:watch": "mocha --require source-map-support/register -r ts-node/register --watch-files src, src/**/*.spec.ts --watch",
+    "integration": "nyc --reporter=html --reporter=text mocha -r ts-node/register --recursive --timeout 5000 integration/**/*.ts",
+    "deploy": "sls deploy",
+    "remove": "sls remove"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aws-lambda-template-generator/ts-multiple-api-proxy-template"
+  },
+  "keywords": [],
+  "author": "mdh",
+  "license": "ISC",
+  "homepage": "https://github.com/aws-lambda-template-generator",
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "reporter": [
+      "html"
+    ],
+    "all": true
+  },
+  "resolutions": {
+    "graphql": "^15.0.0"
+  },
+  "dependencies": {
+    "apollo-server-lambda": "^2.19.2",
+    "axios": "^0.19.2",
+    "graphql": "^15.0.0",
+    "bufferutil": "^4.0.3",
+    "test": "^0.6.0",
+    "utf-8-validate": "^5.0.4"
+  },
+  "devDependencies": {
+    "serverless": "^1.67.3",
+    "serverless-domain-manager": "^3.3.1",
+    "serverless-offline": "^6.8.0",
+    "serverless-plugin-git-variables": "^4.0.0"
+  }
+}
