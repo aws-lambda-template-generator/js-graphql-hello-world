@@ -24,7 +24,8 @@ provider:
   timeout: 30
   iamRoleStatements: ${file(config/permissions.yml)}
   deploymentBucket:
-    name: ${file(config/account.yml):DEPLOYMENT_BUCKET} # from custom config
+    deploymentBucket:
+    name: ${self:custom.env}.${file(config/account.yml):DEPLOYMENT_BUCKET_BASE} # from custom config
     serverSideEncryption: AES256
   environment: ${file(config/env.yml)}
 
@@ -34,7 +35,7 @@ functions:
     name: ${self:custom.functionName}
     events:
       - http:
-          path: graphql/profile
+          path: graphql/hello
           method: any
           cors:
             origin: '*'

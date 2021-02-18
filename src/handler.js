@@ -11,7 +11,7 @@ const lambdaServer = new ApolloServer({
     event,
     context,
     playground: true,
-  introspection: true,
+    introspection: true,
   }),
 });
 

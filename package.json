@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "JavaScript Lambda function with GraphQL Hello World Example",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint ./ --ext .js",
+    "lint-fixup": "./node_modules/.bin/eslint ./ --ext .js --fix",
     "deploy": "sls deploy",
     "remove": "sls remove",
     "dev": "nodemon local.js"
@@ -24,6 +26,7 @@
     "utf-8-validate": "^5.0.4"
   },
   "devDependencies": {
+    "eslint": "^7.12.1",
     "nodemon": "^2.0.7",
     "serverless": "^1.67.3",
     "serverless-domain-manager": "^3.3.1",
