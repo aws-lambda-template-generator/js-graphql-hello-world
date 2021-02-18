@@ -1,0 +1,3 @@
+REGION: ap-southeast-2
+ACCOUNT_ID: <your account id>
+DEPLOYMENT_BUCKET_BASE: lambdafunction.bucket
