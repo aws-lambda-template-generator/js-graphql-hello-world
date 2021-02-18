@@ -35,7 +35,7 @@ Go to `http://localhost:3000/test/graphql`. You may need to change the actual qu
 `apollo-server-lambda` uses `apollo-server` under the hood. Therefore, the logic should work when it is replaced ith apollo-server. We can run the application without spinning up a local lambda.
 
 ```js
-yarn dev
+yarn dev-server
 ```
 
 ## Deploy

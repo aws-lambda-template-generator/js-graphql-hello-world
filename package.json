@@ -7,7 +7,7 @@
     "lint-fixup": "./node_modules/.bin/eslint ./ --ext .js --fix",
     "deploy": "sls deploy",
     "remove": "sls remove",
-    "dev": "nodemon local.js"
+    "dev-server": "nodemon local.js"
   },
   "keywords": [],
   "author": "mdh",
